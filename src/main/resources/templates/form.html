@@ -63,9 +63,9 @@
 
 <div class="form-container">
     <h2>Ingrese el nombre del personaje</h2>
-    <form th:action="@{/api/consultar}" th:object="${user}" method="post">
+    <form th:action="@{/api/consultar}" method="get">
         <label for="name">Nombre:</label>
-        <input type="text" id="name"  placeholder="Rick Sanchez@">
+        <input type="text" id="name" name="name" placeholder="Rick Sanchez">
         <button type="submit">Enviar</button>
     </form>
 </div>
