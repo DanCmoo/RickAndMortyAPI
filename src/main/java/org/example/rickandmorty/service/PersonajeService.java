@@ -10,7 +10,7 @@ import java.net.URI;
 
 @Service
 public class PersonajeService {
-    private RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
 
     public PersonajeService(@Autowired RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
