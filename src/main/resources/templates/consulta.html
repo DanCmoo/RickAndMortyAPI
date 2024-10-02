@@ -8,18 +8,44 @@
 <style>
     @font-face {
         font-family: "Rick-And-Morty";
-        src: url("get_schwifty.ttf");
+        src: url("data:get_schwifty.ttf") format("truetype");
     }
+
     body {
-        font-family: "Rick-And-Morty","Arial";
+        font-family: "Rick-And-Morty", Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
         background-color: #f0f4f8;
     }
-    h2 {
+
+    .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
         text-align: center;
+    }
+
+    h2 {
+        color: #333;
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    span {
         color: #333;
     }
 </style>
 <body>
+    <div class="container">
     <h2>Id: </h2> <br>
     <p><span th:text="${id}"></span></p><br>
     <h2>Nombre: </h2> <br>
@@ -28,7 +54,7 @@
     <p><span th:text="${status}"></span></p><br>
     <h2>Species: </h2>
     <p><span th:text="${species}"></span></p>
-
+    </div>
     
 </body>
 </html>
